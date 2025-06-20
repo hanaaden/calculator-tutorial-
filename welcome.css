@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #6b73ff, #000dff);
+    color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.welcome-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+    max-width: 500px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.welcome-container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(107,115,255,0.7);
+}
+
+.welcome-container p {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #d0d0ff;
+}
+
+.welcome-button {
+    background: linear-gradient(45deg, #ff6b6b, #ff3b3b);
+    border: none;
+    padding: 18px 50px;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.6);
+    transition: all 0.4s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.welcome-button:hover {
+    background: linear-gradient(45deg, #ff3b3b, #ff6b6b);
+    box-shadow: 0 6px 20px rgba(255, 59, 59, 0.8);
+    transform: scale(1.05);
+}
