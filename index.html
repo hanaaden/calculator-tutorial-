@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" class="calculator-display" disabled />
-        <div class="calculator-buttons">
-            <button class="btn btn-clear">C</button>
-            <button class="btn btn-backspace">⌫</button>
-            <button class="btn btn-percent">%</button>
-            <button class="btn btn-operator">÷</button>
-
-            <button class="btn btn-number">7</button>
-            <button class="btn btn-number">8</button>
-            <button class="btn btn-number">9</button>
-            <button class="btn btn-operator">×</button>
-
-            <button class="btn btn-number">4</button>
-            <button class="btn btn-number">5</button>
-            <button class="btn btn-number">6</button>
-            <button class="btn btn-operator">−</button>
-
-            <button class="btn btn-number">1</button>
-            <button class="btn btn-number">2</button>
-            <button class="btn btn-number">3</button>
-            <button class="btn btn-operator">+</button>
-
-            <button class="btn btn-number zero">0</button>
-            <button class="btn btn-decimal">.</button>
-            <button class="btn btn-equal">=</button>
+    <div class="calculator" id="calcu">
+        <div id="'output"> 
+            <input type="text" class="display" placeholder="000000" id="res"> 
+        </div>
+        <div class="row1">
+            <input class="btn" type="button" value="c" onclick=Clear()>
+            
+        </div>
+         <div class="row2">
+            <input class="btn" type="button" value="7" onclick="Solve('7')">
+            <input class="btn" type="button" value="8" onclick="Solve('8')">
+            <input class="btn" type="button" value="9" onclick="Solve('9')">
+            <input class="btn" type="button" value="x" onclick="Solve('*')">
+        </div>
+         <div class="row3">
+            <input class="btn" type="button" value="4" onclick="Solve('4')">
+           <input class="btn" type="button" value="5" onclick="Solve('5')">
+            <input class="btn" type="button" value="6" onclick="Solve('6')">
+            <input class="btn" type="button" value="+" onclick="Solve('+')">
+        </div>
+         <div class="row3">
+            <input class="btn" type="button" value="3" onclick="Solve('3')">
+           <input class="btn" type="button" value="2" onclick="Solve('2')">
+           <input class="btn" type="button" value="1" onclick="Solve('1')">
+            <input class="btn" type="button" value="-" onclick="Solve('-')">
+        </div>
+         <div class="row4">
+           <input class="btn" type="button" value="0" onclick="Solve('0')">
+            <input class="btn" type="button" value="." onclick="Solve('.')">
+            <input class="btn" type="button" value="/" onclick="Solve('/')">
+            <input class="btn" type="button" value="=" onclick=Result()>
+            
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
